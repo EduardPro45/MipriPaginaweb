@@ -1,0 +1,1203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c5c5c5aa;
+  font-family: 'Lora', serif;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+/* Estilos básicos */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Menú oculto en móviles */
+.nav-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-container.active {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 10px 20px;
+    text-align: left;
+    color: #f2e166;
+    border-bottom: 1px solid #333;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+header {
+  background-color:transparent;
+  position: absolute; 
+  width: 100%;
+  padding: 15px 30px; /* Ajustamos el padding */
+  display: flex; /* Utiliza flexbox para alinear los elementos de manera eficiente */
+  justify-content: space-between; /* Espacio entre los elementos (logo, h1, navegación) */
+  align-items: center; /* Centra los elementos verticalmente */
+  top: 0; /* Asegura que esté en la parte superior */
+  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+  
+}
+
+.logo-container {
+  display: flex;
+  background-color:transparent; /* Fondo semitransparente */
+  align-items: flex-start;   /* Centra verticalmente los elementos */
+  gap: 15px; 
+  padding: 0;
+}
+
+.logo-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem; /* Tamaño ligeramente mayor */
+  color:#b30622;
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 1; /* Elimina espacio extra debajo del texto */
+}
+
+.logo-text .slogan {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem; /* Más pequeño */
+  color: #eedb62;
+  margin: 10px 0 0 0;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.logo {
+  width: 70px; 
+  height: auto; 
+  align-self: center;
+}
+
+/* Carrusel con controles */
+.auto-carrusel {
+  position: relative;
+  height: 100vh;
+  margin-top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrusel-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden
+}
+
+.carrusel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden; 
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Flechas de navegación */
+.carrusel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.carrusel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carrusel-arrow.prev {
+  left: 20px;
+}
+
+.carrusel-arrow.next {
+  right: 20px;
+}
+
+/* Indicadores de posición */
+.carrusel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #eedb62;
+  transform: scale(1.2);
+}
+
+/* Contenido del slide (se mantiene igual) */
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 800px;
+  font-family: 'Poppins', sans-serif;/* Fuente general para el contenido */
+}
+
+.slide-content h2 {
+  font-size: 4.6rem;       /* Tamaño más grande */
+  margin-bottom: 1rem;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+}
+
+.slide-content p {
+  font-size: 1.5rem;        /* Tamaño cómodo para leer */
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* Cambia estas reglas en tu CSS */
+.slide-content h2,
+.slide-content p,
+.slide-content .btn-primary {
+  opacity: 0;
+  transform: translateY(40px); /* Inicia desplazado hacia abajo */
+  transition: all 0.6s ease;
+}
+
+/* Ajusta los tiempos de animación para crear un efecto escalonado */
+.carrusel-slide.active .slide-content h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s; /* Retraso para el título */
+}
+
+.carrusel-slide.active .slide-content p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s; /* Retraso para el párrafo */
+}
+
+.carrusel-slide.active .slide-content .btn-primary {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s; /* Retraso para el botón */
+}
+
+.highlight {
+  color: #FFD700; /* dorado */
+  font-weight: 700;
+}
+
+.slide-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-primary { 
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,  #b30622, #ff0000);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.main-nav {
+ font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color:#eedb62;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-icon .material-icons {
+  font-size: 1.3em;
+}
+
+.nav-icon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color:#b30622;
+  transition: width 0.3s ease;
+}
+
+.nav-icon:hover::after,
+.nav-icon.active::after {
+  width: 100%;
+}
+
+.nav-icon:hover {
+  color:#b30622;
+  transform: scale(1.05);
+}
+
+.nav-icon .hover-text {
+  display: none;
+}
+
+.nav-icon:hover .default-text {
+  display: none;
+}
+
+.nav-icon:hover .hover-text {
+  display: inline;
+}
+
+.btn-register,
+.btn-login {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,#b30622, #ff3333); /* rojo vibrante */
+  color: white;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+  background: linear-gradient(to right, #b30622, #ff0000);
+  color: #eedb62;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.panel {
+  height: 80vh; /* Altura del banner, el 80% de la ventana */
+  background: url('image-fogoncito-chicken/portada\ fogoncito\ chicken.png') center/cover no-repeat; /* Imagen de fondo */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto */
+}
+
+.features-section {
+  padding: 4rem 0;
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  background-repeat: repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.features-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.7rem;
+  font-weight: 900;
+  color: #b30622;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  margin-left: -3rem;
+}
+
+.features-subtitle {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #e2b606;
+  line-height: 1.6;
+    white-space: nowrap;
+  margin-left: -1rem;
+}
+ 
+/* Contenedor de tarjetas */
+.features-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  background: #fef2f2;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #facc15;
+}
+
+.feature-title {
+  font:1.6rem 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+ font-weight: 600;
+  color: #dc2626;
+}
+
+.feature-text {
+  font-family:'Segoe UI', sans-serif;
+  color: #2e2e2c;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.promociones-section {
+  background: linear-gradient(to bottom, #b91c1c, #dc2626, #facc15);
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Patrón decorativo sutil al fondo */
+.pattern-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  opacity: 1.05;
+  z-index: 0;
+}
+
+/* Contenedor central */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+/* Título principal */
+.titulo {
+text-align: center;
+  margin-bottom: 3rem;
+  white-space: nowrap;
+}
+
+.titulo h2 {
+    text-align: center;
+  font-size: 4.6rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.titulo .resaltado {
+  color: #facc15;
+}
+
+.titulo p {
+  text-align: center;      /* ← centra el texto */
+  font-size: 1.5rem;
+  color: #fffacd;
+  font-weight: 300;
+  max-width: 900px;
+  margin: 0 auto;          /* ← centra el bloque horizontalmente */
+}
+
+/* Grid de promociones */
+.grid-promos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Tarjeta de promoción */
+.promo-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease;
+}
+
+.promo-card:hover {
+  transform: scale(1.02);
+}
+
+/* Imagen promocional */
+.promo-img {
+  position: relative;
+  aspect-ratio: 7 / 6;
+  overflow: hidden;
+}
+
+.promo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.promo-card:hover .promo-img img {
+  transform: scale(1.05);
+}
+
+/* Etiqueta en la esquina superior */
+.etiqueta {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #facc15;
+  color: #b91c1c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Descuento destacado */
+.descuento {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: #b91c1c;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Información de la promo */
+.promo-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.promo-info h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #b91c1c;
+  margin-bottom: 0.75rem;
+}
+
+.promo-info p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Precios */
+.precio {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.precio-actual {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.precio-anterior {
+  font-size: 1.2rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+/* Botón */
+.boton-promo {
+  background-color: #facc15;
+  color: inherit #b91c1c;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.boton-promo:hover {
+  background-color: #fde047;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Sección de acción */
+.seccion-accion {
+  padding: 4rem 0;
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  text-align: center;
+}
+
+.contenedor-accion {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contenido-accion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-accion {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #b30622;
+  white-space: nowrap;
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .titulo-accion {
+    font-size: 3.5rem;
+  }
+}
+
+.descripcion-accion {
+  font-family: 'Segoe UI', sans-serif;
+  color: #facc15;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.botones-accion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .botones-accion {
+    flex-direction: row;
+  }
+}
+
+.boton {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.boton-principal {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.boton-principal:hover {
+  background-color: #b91c1c;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.footer-logo .logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-footer {
+  width: 60px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo-title div {
+  margin-top: -18px;
+}
+
+.footer-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: #FFD700;
+}
+
+.footer-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #b30622;
+  margin: 0; 
+}
+
+.footer-description {
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+  margin: 1rem 0;
+}
+
+.footer-social a {
+  color: #ccc;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #FFD700;
+}
+
+.footer-section h4 {
+  font-family: 'Poppins', sans-serif; 
+  color: #FFD700;
+  border-bottom: 2px solid ;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #faf9f6;
+}
+
+.footer-bottom {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.wasap-boton {
+  position: fixed; /* Lo fija en una posición en la pantalla */
+  bottom: 20px; /* Lo coloca a 20px del borde inferior */
+  right: 20px; /* Lo coloca a 20px del borde derecho */
+  background-color: transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: all 0.3s ease; /* Efecto suave al pasar el ratón */
+  z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+
+.wasap-boton img {
+  width: 200px; /* Ajusta el tamaño de la imagen del logo */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.wasap-boton:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del botón ligeramente */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+}
+
+
+
+
+/* POSIBLE RESPONSE*/
+
+/* ===== RESPONSIVIDAD GENERAL (PARA TODO EL CONTENIDO) ===== */
+/* Tablet (768px - 992px) */
+@media (max-width: 992px) {
+    /* Ajustes para header */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .logo-text .slogan {
+        font-size: 1.1rem;
+    }
+    
+    /* Carrusel */
+    .slide-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .slide-content p {
+        font-size: 1.2rem;
+    }
+    
+    /* Features */
+    .features-title {
+        font-size: 3.5rem;
+        margin-left: 0;
+    }
+    
+    .features-subtitle {
+        margin-left: 0;
+        white-space: normal;
+    }
+    
+    /* Promociones */
+    .grid-promos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .titulo h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tablet pequeña (576px - 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .nav-icon {
+        padding: 6px 10px;
+        font-size: 1.1rem;
+    }
+    
+    /* Carrusel */
+    .slide-content h2 {
+        font-size: 2.8rem;
+    }
+    
+    .carrusel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        max-width: 100%;
+    }
+    
+    /* Promociones */
+    .titulo h2 {
+        font-size: 2.8rem;
+    }
+    
+    .titulo p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Móvil (480px - 576px) */
+@media (max-width: 576px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .logo-container {
+        margin-bottom: 10px;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Carrusel */
+    .slide-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    /* Promociones */
+    .grid-promos {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Móvil pequeño (hasta 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    .logo-text h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo-text .slogan {
+        font-size: 1rem;
+    }
+    
+    .nav-icon .nav-text {
+        display: none;
+    }
+    
+    .nav-icon .material-icons {
+        font-size: 1.5rem;
+    }
+    
+    /* Carrusel */
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .carrusel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    
+    /* Features */
+    .features-title {
+        font-size: 2.5rem;
+    }
+    
+    .feature-card {
+        padding: 2rem;
+    }
+    
+    /* Sección de acción */
+    .titulo-accion {
+        font-size: 2rem;
+    }
+    
+    .descripcion-accion {
+        font-size: 1.2rem;
+    }
+}
+
+/* Móvil muy pequeño (hasta 360px) */
+@media (max-width: 360px) {
+    /* Ajustes finales para pantallas muy pequeñas */
+    .slide-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .btn-primary, .boton-promo {
+        font-size: 1rem;
+    }
+    
+    .features-title {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* -------  */ 
+
+/* ===== RESPONSIVIDAD PARA TÍTULOS DESTACADOS ===== */
+/* "Los pilares de Nuestro Sabor" y "Ofertas que Encienden tu Apetito" */
+@media (max-width: 1200px) {
+    .features-title, 
+    .titulo h2,
+    .titulo-accion {
+        font-size: 4rem;
+    }
+    
+    .features-subtitle,
+    .titulo p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .features-title,
+    .titulo h2,
+    .titulo-accion {
+        font-size: 3.2rem;
+        white-space: normal;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .features-subtitle,
+    .titulo p {
+        font-size: 1.2rem;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-title,
+    .titulo h2,
+    .titulo-accion {
+        font-size: 2.8rem;
+    }
+    
+    .descripcion-accion {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-title,
+    .titulo h2,
+    .titulo-accion {
+        font-size: 2.2rem;
+    }
+    
+    .features-subtitle,
+    .titulo p {
+        font-size: 1.1rem;
+    }
+    
+    .descripcion-accion {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .features-title,
+    .titulo h2,
+    .titulo-accion {
+        font-size: 1.8rem;
+    }
+    
+    .features-subtitle,
+    .titulo p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste especial para el texto dorado */
+@media (max-width: 768px) {
+    .resaltado,
+    .highlight {
+        display: inline; /* Evita saltos de línea incómodos */
+    }
+}
+
+/* Responsividad para la sección de acción */
+@media (max-width: 576px) {
+    .seccion-accion {
+        padding: 2rem 0;
+    }
+    
+    .titulo-accion {
+        line-height: 1.2;
+    }
+    
+    .boton {
+        padding: 0.6rem 1.5rem;
+        font-size: 1.2rem;
+    }
+}

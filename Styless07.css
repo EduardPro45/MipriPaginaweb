@@ -1,0 +1,102 @@
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ff462a, #ffba25);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Formulario */
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1.5px solid black;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+/* Título */
+form h2 {
+  color: #c62828;
+  margin-bottom: 2rem;
+}
+
+/* Etiquetas */
+form label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-top: 1rem;
+}
+
+/* Campos de entrada */
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fffde7;
+}
+
+/* Botón */
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  background-color: #ff3d00;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #dd2c00;
+}
+
+/* Enlaces */
+form p {
+  margin-top: 1rem;
+}
+
+form a {
+  color: #d84315;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 30px;
+  color: #000000;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.volver:hover{
+  color: #d84315;
+}

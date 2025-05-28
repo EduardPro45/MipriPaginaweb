@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta | Fogoncito Chicken</title>
+  <link rel="stylesheet" href="Styless02.css" />
+  <link rel="icon" href="image-fogoncito-chicken/logoletras.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Panel de opciones -->
+  <header>
+    <div class="logo-container">
+      <a href="pagina-principal.html" aria-label="Ir a página principal">
+        <img src="image-fogoncito-chicken/NewLogo.png" alt="Logo El Fogoncito" class="logo" />
+      </a>
+      <div class="logo-text">
+        <h1>EL FOGONCITO</h1>
+        <p class="slogan">Pollería</p>
+      </div>
+    </div>
+
+<div class="nav-container">
+  <nav class="main-nav">
+    <nav class="main-nav" role="navigation" aria-label="">
+      <a href="pagina-principal.html" class="nav-icon">
+        <span class="material-icons" aria-hidden="true">home</span>
+        <span class="nav-text">Inicio</span>
+      </a>
+
+      <div class="nav-icon dropdown" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-carta">
+        <span class="material-icons" aria-hidden="true">restaurant</span>
+        <span class="nav-text">Carta ▾</span>
+        <div class="dropdown-menu" id="dropdown-carta" role="menu">
+          <a href="#boton_pollo" role="menuitem" class="pollo">Pollo</a>
+          <a href="#boton_chifa" role="menuitem" class="chifa">Chifa</a>
+          <a href="#boton_bebidas" role="menuitem" class="bebidas">Bebidas</a>
+        </div>
+      </div>
+
+      <a href="pagina-nosotros.html" class="nav-icon">
+        <span class="material-icons" aria-hidden="true">settings_accessibility</span>
+        <span class="nav-text">Nosotros</span>
+      </a>
+      <a href="pagina-locales.html" class="nav-icon">
+        <span class="material-icons" aria-hidden="true">store</span>
+        <span class="nav-text">Encuéntranos</span>
+      </a>
+      <a href="Registrarse.html" class="nav-icon btn-register">
+        <span class="nav-text default-text">Regístrate</span>
+        <span class="nav-text hover-text">¡Únete!</span>
+      </a>
+      <a href="inicio-sesion.html" class="nav-icon btn-login">
+        <span class="nav-text default-text">Iniciar sesión</span>
+        <span class="nav-text hover-text">¡A disfrutar!</span>
+      </a>
+    </nav>
+    </nav>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+  <span class="material-icons">menu</span>
+</button>
+  </header>
+
+  <!-- Encabezado visual de la carta -->
+  <div class="hero-section">
+    <div class="pattern-overlay"></div>
+      <div class="hero-content">
+         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         class="hero-icon">
+         <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+         <path d="M7 2v20"></path>
+         <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+         </svg>
+         <h1 class="hero-title">¡Hora de Saborear!</h1>
+         <p class="hero-subtitle">Auténtico sabor peruano en cada bocado</p>
+        </div>
+     </div>
+
+   <div id="boton_pollo" class="container-custom-menu py-16">
+        <section id="pollo" class="scroll-mt-24">
+            <div class="flex items-center mb-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600 mr-4 drop-shadow-sm">
+                    <path d="M15.45 15.4c-2.13.65-4.3.32-5.7-1.1-2.29-2.27-1.76-6.5 1.17-9.42 2.93-2.93 7.15-3.46 9.43-1.18 1.41 1.41 1.74 3.57 1.1 5.71-1.4-.51-3.26-.02-4.64 1.36-1.38 1.38-1.87 3.23-1.36 4.63z"></path>
+                    <path d="m11.25 15.6-2.16 2.16a2.5 2.5 0 1 1-4.56 1.73 2.49 2.49 0 0 1-1.41-4.24 2.5 2.5 0 0 1 3.14-.32l2.16-2.16"></path>
+                </svg>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-red-700 tracking-tight">Pollos a la Brasa y Combos</h2>
+            </div>
+            <div class="grid-promos-custom">
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Pollo entero a la brasa dorado con papas y ensalada" src="image-fogoncito-chicken/img1.jpg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>Más Pedido
+                        </div>
+                        <div class="descuento-custom">¡Ahorra S/ 4.10!</div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">1 Pollo a la Brasa</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Nuestro clásico pollo marinado, jugoso por dentro y crujiente por fuera. Incluye papas fritas y ensalada.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 55.90</span>
+                            <span class="precio-anterior-custom">S/ 60.00</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Pollo a la Brasa', 55.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Medio pollo a la brasa con guarniciones" src="image-fogoncito-chicken/img2.jpg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <line x1="19" x2="5" y1="5" y2="19"></line>
+                                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                            </svg>Recomendado
+                        </div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">1/2 Pollo a la Brasa</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Media porción de nuestro delicioso pollo, perfecto para uno. Incluye papas fritas y ensalada.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 32.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('1/2 Pollo a la Brasa', 32.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Cuarto de pollo a la brasa servido en plato" src="image-fogoncito-chicken/img3.jpg">
+                        <div class="descuento-custom">¡Oferta!</div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">1/4 Pollo a la Brasa</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Una porción individual de nuestro exquisito pollo. Incluye papas fritas y ensalada.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 18.90</span>
+                            <span class="precio-anterior-custom">S/ 20.00</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('1/4 Pollo a la Brasa', 18.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Alitas BBQ glaseadas en un bowl" src="image-fogoncito-chicken/img4.webp">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
+                                <path d="M7 7h.01"></path>
+                            </svg>Favorito
+                        </div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Alitas BBQ (12 unidades)</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Crujientes alitas bañadas en nuestra salsa BBQ casera, acompañadas de papas fritas.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 28.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Alitas BBQ', 28.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Combo de octavo de pollo con chaufa y papas" src="image-fogoncito-chicken/img5.jpg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>Más Pedido
+                        </div>
+                        <div class="descuento-custom">¡Ahorra S/ 3.90!</div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Combo Solitario</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">1/8 de pollo, arroz chaufa, papas fritas, ensalada y cremas de la casa a elegir.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 22.00</span>
+                            <span class="precio-anterior-custom">S/ 25.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Combo Solitario', 22.00)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Combo de cuarto de pollo con chaufa y papas" src="image-fogoncito-chicken/img6.jpg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <line x1="19" x2="5" y1="5" y2="19"></line>
+                                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                            </svg>Recomendado
+                        </div>
+                        <div class="descuento-custom">¡Imperdible!</div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Combo Brasa Suprema</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">1/4 de pollo, arroz chaufa, papas fritas, ensalada y cremas.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 23.88</span>
+                            <span class="precio-anterior-custom">S/ 26.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full"  button onclick="agregarAlCarrito('Combo Brasa Suprema', 23.88)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="boton_chifa" class="mt-24 scroll-mt-24">
+            <div class="flex items-center mb-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600 mr-4 drop-shadow-sm">
+                    <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path>
+                    <path d="M7 21h10"></path>
+                    <path d="M19.5 12 22 6"></path>
+                    <path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62"></path>
+                    <path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62"></path>
+                    <path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62"></path>
+                </svg>
+                <h2 id="chifa" class="text-4xl md:text-5xl font-extrabold text-red-700 tracking-tight">Sabores del Chifa Oriental</h2>
+            </div>
+            <div class="grid-promos-custom">
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Arroz chaufa de pollo en un plato hondo" src="image-fogoncito-chicken/img7.jpg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>Clásico
+                        </div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Arroz Chaufa de Pollo</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Clásico arroz frito al wok con trozos de pollo, tortilla de huevo y cebolla china.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 22.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Arroz Chaufa de Pollo', 22.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Tallarín saltado con trozos de pollo y verduras" src="image-fogoncito-chicken/img8.jpg">
+                        <div class="descuento-custom">¡Precio Especial!</div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Tallarín Saltado de Pollo</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Fideos chinos salteados al wok con pollo, verduras frescas y salsa de soya.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 24.90</span>
+                            <span class="precio-anterior-custom">S/ 27.00</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Tallarín Saltado de Pollo', 24.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Sopa wantán con diversos ingredientes en un tazón" src="image-fogoncito-chicken/img9.jpg">
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Sopa Wantán Especial</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Caldo sustancioso con wantanes rellenos de pollo, chancho asado, pollo y langostinos.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 20.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Sopa Wantan Especial', 20.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>                                      
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Kam Lu Wantán con salsa agridulce y trozos de carne" src="image-fogoncito-chicken/img10.jpeg">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
+                                <path d="M7 7h.01"></path>
+                            </svg>Favorito
+                        </div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Kam Lu Wantán</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Wantanes fritos bañados en salsa agridulce con trozos de pollo, chancho y verduras.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 26.90</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Kam Lu Wantan', 26.90)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>                                          
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="boton_bebidas" class="mt-24 scroll-mt-24">
+            <div class="flex items-center mb-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600 mr-4 drop-shadow-sm">
+                    <path d="M15.2 22H8.8a2 2 0 0 1-2-1.79L5 3h14l-1.81 17.21A2 2 0 0 1 15.2 22Z"></path>
+                    <path d="M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0"></path>
+                </svg>
+                <h2 id="bebidas" class="text-4xl md:text-5xl font-extrabold text-red-700 tracking-tight">Bebidas para Acompañar</h2>
+            </div>
+            <div class="grid-promos-custom">
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Jarra de chicha morada con hielo" src="image-fogoncito-chicken/img11.webp">
+                        <div class="etiqueta-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>Tradicional
+                        </div>
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Chicha Morada (Jarra 1L)</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Refrescante chicha morada casera, hecha con maíz morado natural.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 12.00</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Chicha Morada', 12.00)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-card-custom group">
+                    <div class="promo-img-custom">
+                        <img class="imagen" alt="Jarra de jugo de maracuyá fresco" src="image-fogoncito-chicken/img12.jpg">
+                    </div>
+                    <div class="promo-info-custom">
+                        <h3 class="text-xl font-extrabold text-red-700 mb-2 group-hover:text-yellow-500 transition-colors duration-300">Maracuyá (Jarra 1L)</h3>
+                        <p class="text-sm text-gray-700 mb-3 flex-grow">Jugo de maracuyá natural, el balance perfecto entre dulce y ácido.</p>
+                        <div class="precio-custom">
+                            <span class="precio-actual-custom">S/ 12.00</span>
+                        </div>
+                        <button class="boton-promo-custom w-full" button onclick="agregarAlCarrito('Maracuyá', 12.00)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <circle cx="8" cy="21" r="1"></circle>
+                                <circle cx="19" cy="21" r="1"></circle>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                            </svg>¡Lo Quiero!
+                        </button>
+                    </div>
+      </section>
+   </div>
+
+<!-- Botón para mostrar el carrito -->
+<button onclick="mostrarCarrito()" class="carro">
+  <span id="letra" class="material-icons">shopping_cart</span>
+</button>
+
+<div id="fondo-modal" class="fondo-modal" style="display: none;">
+  <div id="carrito" class="modal-carrito">
+    <span class="cerrar" onclick="cerrarCarrito()">✖</span>
+    <img src="image-fogoncito-chicken/logoletras.png" alt="logo" class="logo"><br>
+    <h2>Tu Carrito</h2><br>
+    <ul id="lista-carrito"></ul><br>
+    <p><strong>TOTAL: S/ <span id="total">0</span></strong></p>
+
+    <!-- Selector de método de pago -->
+    <div class="metodo-pago">
+      <label for="metodo">Método de Pago:</label>
+      <select id="metodo" onchange="mostrarTipoTarjeta()">
+        <option value="efectivo">Efectivo</option>
+        <option value="tarjeta">Tarjeta</option>
+      </select>
+    </div>
+
+    <!-- Selector de tipo de tarjeta -->
+    <div id="tipo-tarjeta-box" style="display: none; margin-top: 10px;">
+      <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+      <select id="tipo-tarjeta">
+        <option value="visa">Visa</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="yape">Yape</option>
+        <option value="plin">Plin</option>
+      </select>
+    </div>
+
+    <button class="voton"><a href="Compardo.html">Comprar</a></button>
+  </div>
+</div>
+
+<script>
+  let total = 0;
+  let carrito = {};
+
+  function agregarAlCarrito(nombre, precio) {
+    if (!carrito[nombre]) {
+      carrito[nombre] = { cantidad: 1, precio: precio };
+    } else {
+      carrito[nombre].cantidad++;
+    }
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById('lista-carrito');
+    lista.innerHTML = '';
+    total = 0;
+
+    for (let producto in carrito) {
+      const item = carrito[producto];
+      const li = document.createElement('li');
+      const subtotal = item.precio * item.cantidad;
+      li.textContent = `${producto} x${item.cantidad} - S/ ${subtotal.toFixed(2)}`;
+      lista.appendChild(li);
+      total += subtotal;
+    }
+
+    document.getElementById('total').textContent = total.toFixed(2);
+  }
+
+  function mostrarCarrito() {
+    document.getElementById('fondo-modal').style.display = 'flex';
+  }
+
+  function cerrarCarrito() {
+    document.getElementById('fondo-modal').style.display = 'none';
+  }
+  function mostrarTipoTarjeta() {
+  const metodo = document.getElementById('metodo').value;
+  const tarjetaBox = document.getElementById('tipo-tarjeta-box');
+  tarjetaBox.style.display = (metodo === 'tarjeta') ? 'block' : 'none';
+}
+
+</script>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Logo y descripción -->
+      <div class="footer-logo">
+        <div class="logo-title">
+          <!-- Ícono -->
+          <img src="image-fogoncito-chicken/NewLogo.png" alt="Logo" width="32" height="32" class="logo-footer" />
+          <div>
+            <span class="footer-title">El Fogoncito</span>
+            <p class="footer-subtitle">Pollería</p>
+          </div>
+        </div>
+        <p class="footer-description">Disfruta del mejor pollo a la brasa con el auténtico sabor peruano. Tradición y calidad desde 1995.</p>
+        <div class="footer-social">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/menu">Carta</a></li>
+          <li><a href="/nosotros">Nuestra historia</a></li>
+          <li><a href="/ubicacion">Encuéntranos</a></li>
+        </ul>
+      </div>
+
+      <!-- Horarios -->
+      <div class="footer-section">
+        <h4>Horarios</h4>
+        <ul>
+          <li><span>Lunes - Jueves:</span> 10:00 - 22:00</li>
+          <li><span>Viernes - Sábado:</span> 10:00 - 23:00</li>
+          <li><span>Domingo:</span> 12:00 - 2:00</li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Av. 13 de Enero 1723, San Juan de Lurigancho</li>
+          <li>Teléfono:</li>
+          <li>935 258 422</li>
+          <li>Av. Gran Chimú, San Juan de Lurigancho</li>
+          <li>Teléfono:</li>
+          <li>987 654 321</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> © 2025 Chino Brasa - Tradición Peruana con Sabor Moderno</p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

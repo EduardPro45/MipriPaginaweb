@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña | Fogoncito Chicken</title>
+    <link rel="icon" href="image-fogoncito-chicken/logoletras.png">
+<style>
+    /* Styless-recuperar.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #ff462a, #ffba25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1.5px solid black;
+}
+
+h2 {
+    color: #b03f3f;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #5c3a28;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #5c3a28;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f3d288;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e94d30;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c73b20;
+}
+
+a {
+    color: #b03f3f;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+
+    <form action="#" method="post" id="form-recuperar">
+        <h2>¿Olvidaste tu contraseña?</h2>
+        <p>Ingresa tu correo electrónico registrado y te enviaremos instrucciones para restablecer tu contraseña.</p>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <button type="submit">Enviar</button>
+
+        <p><a href="inicio-sesion.html">← Volver a Iniciar sesión</a></p>
+    </form>
+
+
+
+    <!-- Script para el boton 'Enviar' ,por el momento solo redirige a pagina-principal.html -->
+    <script>
+        document.getElementById("form-recuperar").addEventListener("submit", function(e) {
+            e.preventDefault(); // Previene el envío real, ya que aún no hay backend.
+            alert("Si el correo ingresado está registrado, te enviaremos instrucciones para recuperar tu contraseña."); // mensaje de alerta aparecera despues de dar clic en enviar
+            window.location.href = "pagina-principal.html"; // Redirige a pagina principal
+        });
+    </script>
+
+</body>
+
+</html>

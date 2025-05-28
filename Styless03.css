@@ -1,0 +1,360 @@
+
+  /* Mapa de locales */
+  .mapa {
+    margin: 20px auto; /* Centra la sección del mapa */
+    padding: 20px; /* Relleno alrededor del mapa */
+    text-align: center; /* Centra el texto dentro de la sección */
+  }
+
+  /* Sección de locales */
+  .locales {
+    display: flex; /* Flexbox para alinear las tarjetas de locales */
+    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+    margin-top: 30px; /* Espacio arriba de la sección */
+  }
+  body{
+    background-color: #c5c5c5aa;
+  }
+ 
+  .local {
+    background-color: rgb(255, 255, 255); /* Fondo blanco para cada tarjeta */
+    padding: 20px; /* Relleno dentro de las tarjetas */
+    margin: 10px; /* Espacio entre cada tarjeta */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las tarjetas */
+    width: 30%; /* Ancho de las tarjetas */
+    border: 2px solid #720000;
+  }
+  h2 {
+  
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #c9a06c; /* Línea de separación dorada */
+      display: inline-block;
+  }
+  .local h3 {
+    color: #b9201e; /* Color delos títulos de las tarjetas */
+  }
+  
+  .local p {
+    margin-top: 5px; /* Espacio entre los párrafos dentro de cada tarjeta */
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #333; /* Fondo para el pie de pagina */
+    color: white; /* Texto */
+    text-align: center; /* Centra el contenido del pie de página */
+    padding: 20px; /* Relleno alrededor del pie de página */
+    margin-top: 30px; /* Espacio encima del pie de página */
+  }
+
+  #mapita{
+    border: 1px solid black;
+  }
+
+
+  .titulo_locales {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  height: 40vh;
+  background-color: #b30622;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.titulo_L {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+  .titulo_L {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo_locales {
+    height: 50vh;
+  }
+}
+
+
+.logo-container {
+  display: flex;
+  background-color: black;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  position: absolute; 
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+/*diseño de LOCALES MAPA*/
+
+/* Estilos generales */
+
+/*
+.locales-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.local {
+  margin-bottom: 3rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.local-info {
+  padding: 1.5rem;
+  background: #cf4435;
+  color: white;
+}
+
+.local-info h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contacto p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.local-content {
+  display: flex;
+}
+
+.local-image, .local-map {
+  flex: 1;
+  min-height: 300px;
+}
+
+.local-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.local-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+*/
+
+
+/* Estilos responsivos */
+/*
+@media (max-width: 768px) {
+  .local-content {
+    flex-direction: column;
+  }
+  
+  .local-image, .local-map {
+    min-height: 250px;
+  }
+  
+  .contacto {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+*/
+/*
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');*//* Iconos (necesitarás Font Awesome) */
+
+body{
+  background-color: white;
+}
+
+/* ESTILOS PRINCIPALES */
+.locales-container {
+  max-width: 10800px;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
+  background-color: white;
+  
+}
+
+.local {
+  
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 2px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.local-info {
+  padding: 1.5rem;
+  background: white;
+  
+  border-radius: 5px;
+  color: black;
+}
+
+.local-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: black;
+  
+}
+
+.contacto p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* CONTENEDOR PRINCIPAL CON DISPOSICIÓN LATERAL */
+.local-content {
+  display: flex;
+  height: 400px; /* Altura fija para ambos */
+}
+
+.local-image {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.local-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.local-map {
+  flex: 1.5; /* Mapa más ancho */
+  padding: 1.5rem;
+  padding-left: 0;
+}
+
+.local-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* LÍNEA DIVISORIA VERTICAL */
+.local-content {
+  position: relative;
+}
+
+.local-content::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 1px;
+  background: linear-gradient(to bottom, 
+              transparent, 
+              rgba(0,0,0,0.1), 
+              transparent);
+}
+
+
+.local {
+  width: 100%;          /* Ocupa el ancho disponible */
+  max-width: 900px;     /* Ancho máximo para no estirarse demasiado */
+  margin: 0 auto 3rem;  /* Centrado y margen inferior */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.local{
+  background-color:rgb(236, 82, 82);
+  /* Degradado "llamas" combinado con sombra */
+background: linear-gradient(45deg, 
+              rgb(236, 82, 82) 0%, 
+              rgb(232, 126, 61) 50%, 
+              rgb(192, 57, 43) 100%);
+box-shadow: 0 3px 10px rgba(236, 82, 82, 0.4);
+}
+
+
+
+
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+  .local-content {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .local-image {
+    height: 300px;
+    padding-bottom: 0;
+  }
+  
+  .local-map {
+    height: 350px;
+    padding-top: 0;
+    padding-left: 1.5rem;
+  }
+  
+  .local-content::after {
+    display: none;
+  }
+}
+
+/* ICONOS */
+.fas {
+  min-width: 20px;
+  text-align: center;
+}

@@ -1,0 +1,85 @@
+/*ESTILOS DEL CODIGO "BIENVENIDO"*/
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(https://www.igesur.com/wp-content/uploads/2024/12/comportamiento-de-la-madera-frente-al-fuego.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #F2E166;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Playwrite DK Loopet", cursive;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      color: #b9201e;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 0.5px #F2E166;
+      transform: translateY(-30px);
+      animation: fadeInDown 3s ease;
+    }
+    @keyframes fadeInDown{ 
+    50%{ 
+    opacity: 0; 
+    transform: translateY(-100px); 
+    }   
+    100%{ 
+    opacity: 1; 
+    transform: translateY(-30px); 
+    } 
+} 
+    img {
+      width: 450px;
+      height: auto;
+      margin-bottom: 60px;
+      animation: imagen 2.5s ease-in-out ;
+    }
+    @keyframes imagen{  
+    0%{ 
+    transform: translateY(1000px); 
+    } 
+    50%{ 
+    transform: translateY(-500px); 
+    } 
+    100%{
+    transform: translateY(0px);
+    }
+} 
+    a button {
+      background-color: #F3E25E;
+      color: #b9201e;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      border:#b9201e solid 1px;
+      font-weight: bold;
+      animation: pulsar 2s ease infinite;
+      cursor: pointer;
+    }
+    @keyframes pulsar{ 
+    0%, 100%{ 
+    transform: scale(1); 
+    } 
+    50%{ 
+    transform: scale(1.1); 
+    } 
+} 
+
+    a button:hover {
+      background-color: #d8db00;
+    }

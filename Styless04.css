@@ -1,0 +1,214 @@
+
+/* Estilo de la sección "Quiénes somos" */
+.quienes-somos {
+    background-color: white; /* Fondo blanco para la sección */
+    padding: 30px; /* Relleno dentro de la sección */
+    margin: 20px; /* Margen alrededor de la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la sección */
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+.quienes-somos h2 {
+    font-size: 2em; /* Tamaño grande para el título de la sección */
+    color: #333; /* Color gris oscuro para el título */
+}
+
+.descripcion {
+    font-size: 1.2em; /* Tamaño de texto para la descripción */
+    color: #555; /* Color gris claro para el texto */
+    line-height: 1.6; /* Mayor espacio entre líneas para una mejor legibilidad */
+    margin-top: 20px; /* Espacio arriba de la descripción */
+    max-width: 800px; /* Ancho máximo para el texto */
+    margin-left: auto; /* Centra el texto a la izquierda */
+    margin-right: auto; /* Centra el texto a la derecha */
+}
+
+.imagen-nosotros {
+    margin-top: 30px; /* Espacio arriba de la imagen */
+}
+
+.imagen-nosotros .imagen {
+    width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+    max-width: 350px; /* La imagen no será más ancha que 600px */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+h3 {
+    font-size: 1.8em; /* Tamaño grande para el subtítulo "Síguenos en" */
+    color: #333; /* Color gris oscuro para el subtítulo */
+    margin-top: 30px; /* Espacio arriba del subtítulo */
+}
+
+/* Estilos para los botones de redes sociales */
+.redes-sociales {
+    display: flex; /* Utiliza Flexbox para organizar los botones horizontalmente */
+    justify-content: center; /* Centra los botones en la sección */
+    gap: 30px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio arriba de los botones */
+}
+
+.botonsiño {
+    background-color: #ffbb00c7; /* Color de fondo naranja para los botones */
+    color: rgb(0, 0, 0); /* El texto será blanco */
+    padding: 15px; /* Relleno dentro de los botones */
+    text-decoration: none; /* Se quita el subrayado de los enlaces */
+    border-radius: 8px; /* Bordes redondeados para los botones */
+    display: flex; /* Utiliza Flexbox para organizar el contenido del botón */
+    align-items: center; /* Centra los elementos verticalmente dentro del botón */
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    width: 200px; /* Ancho fijo para los botones */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del botón */
+    transition: background-color 0.3s; /* Transición suave al pasar el ratón por encima */
+}
+
+.botonsiño:hover {
+    background-color: #e67300; /* Cuando pasas el ratón por encima, el color de fondo cambia a un tono más oscuro */
+}
+
+.botonsiño img {
+    width: 30px; /* Los íconos tendrán un ancho de 30px */
+}
+
+.social-btn span {
+    font-size: 1.2em; /* tamaño de los textos */
+}
+section{
+    background-color: #c5c5c5aa;
+}
+
+
+  .titulo_somos {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  height: 40vh;
+  background-color: #b30622;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.titulo_S {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+  .titulo_S {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo_somos {
+    height: 50vh;
+  }
+}
+
+
+.logo-container {
+  display: flex;
+  background-color: black;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  position: absolute; 
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+.descripcion {
+  text-align: justify;           /* Texto justificado */
+  text-align-last: left;       /* Última línea centrada */
+  max-width: 90%;                /* Ocupa el 90% del contenedor (en móviles no se pega a los bordes) */
+  margin: 0 auto;                /* Centrado horizontal */
+  padding: 1rem;                 /* Espaciado interno */
+  font-size: clamp(1rem, 3vw, 1.3rem);  /* Tamaño adaptable (mínimo 1rem, máximo 1.3rem) */
+  line-height: 1.6;              /* Espaciado entre líneas */
+  color: black;   
+  font-family: Arial, Helvetica, sans-serif;                /* Color de texto legible */
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .descripcion {
+    text-align: justify;            /* En móviles, el texto justificado puede verse raro */
+    text-align-last: left;       /* Alineación izquierda para mejor lectura */
+    padding: 0.5rem;             /* Reducir espaciado */
+    line-height: 1.5;            /* Espaciado más compacto */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (ej: < 400px) */
+@media (max-width: 400px) {
+  .descripcion {
+    font-size: 1rem;             /* Tamaño fijo para evitar letra demasiado pequeña */
+  }
+}
+
+
+
+/*response botones redes sociales*/
+
+
+
+/* Pantallas medianas  */
+@media (max-width: 768px) {
+    .redes-sociales {
+        gap: 1rem; /* Reduce espacio entre botones */
+    }
+    .botonsiño img {
+        width: 45px;
+        height: 45px;
+    }
+    .botonsiño h1 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 480px) {
+    .redes-sociales {
+        flex-direction: row; /* Mantiene botones en fila (opcional: column para apilarlos) */
+        gap: 0.8rem;
+    }
+    .botonsiño {
+        min-width: 80px; /* Ancho mínimo para evitar aplastamiento */
+    }
+    .botonsiño img {
+        width: 40px;
+        height: 40px;
+    }
+    .botonsiño h1 {
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas muy pequeñas*/
+@media (max-width: 350px) {
+    .redes-sociales {
+        gap: 0.5rem;
+    }
+    .botonsiño img {
+        width: 35px;
+        height: 35px;
+    }
+    .botonsiño h1 {
+        font-size: 0.7rem;
+    }
+}

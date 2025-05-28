@@ -1,0 +1,100 @@
+/* Fondo general */
+body {
+    background: linear-gradient(to bottom right, #ff462a, #ffba25);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.volver {
+    display: inline-block;
+    margin-top: 30px;
+    color: #000000;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  .volver:hover{
+    color: #d84315;
+  }
+/* Estilo del formulario */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1.5px solid black;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Títulos */
+form h2 {
+    text-align: center;
+    color: #d32f2f;
+    margin: 0;
+}
+
+/* Inputs y select */
+input, select {
+    padding: 10px;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #d32f2f;
+}
+
+/* Botón */
+button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* Etiquetas */
+label {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Enlaces */
+a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-right: 8px;
+}

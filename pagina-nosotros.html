@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Fogoncito Chiken</title>
+    <link rel="stylesheet" href="Styless01.css">
+    <link rel="stylesheet" href="Styless04.css">
+    <link rel="stylesheet" href="Styless02.css">
+    <link rel="icon" href="image-fogoncito-chicken/logoletras.png">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- link para iconos -->
+
+</head>
+
+<body>
+
+    <!-- Panel de navegación -->
+      <header>
+
+        <div class="logo-container">
+        
+          <a href="pagina-principal.html">
+            <img src="image-fogoncito-chicken/NewLogo.png" alt="Logo" class="logo">
+          </a>
+        
+          <div class="logo-text">
+            <h1>EL <br> FOGONCITO</h1>
+            <p class="slogan">Pollería</p>
+          </div>
+        
+        </div>
+<div class="nav-container">
+  <nav class="main-nav">
+        <nav class="main-nav">
+
+          <a href="pagina-principal.html" class="nav-icon">
+            <span class="material-icons">home</span>
+            <span class="nav-text">Inicio</span>
+          </a>
+
+          <a href="pagina-menu.html" class="nav-icon">
+            <span class="material-icons">restaurant</span>
+            <span class="nav-text">Carta</span>
+          </a>
+
+          <a href="pagina-nosotros.html" class="nav-icon active">
+            <span class="material-icons">settings_accessibility</span>
+            <span class="nav-text">Nosotros</span>
+          </a>
+
+          <a href="pagina-locales.html" class="nav-icon">
+            <span class="material-icons">store</span>
+            <span class="nav-text">Encuéntranos</span>
+          </a>
+
+          <a href="Registrarse.html" class="nav-icon btn-register">
+            <span class="nav-text default-text">Regístrate</span>
+            <span class="nav-text hover-text">¡Únete!</span>
+          </a>
+
+          <a href="inicio-sesion.html" class="nav-icon btn-login">
+            <span class="nav-text default-text">Iniciar sesión</span>
+            <span class="nav-text hover-text">¡A disfrutar!</span>
+          </a>
+
+        </nav>
+  </nav>
+</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <span class="material-icons">menu</span>
+</button>
+
+  </header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-container');
+    menu.classList.toggle('active');
+  }
+</script>
+
+<div class="hero-section">
+    <div class="pattern-overlay"></div>
+      <div class="hero-content">
+
+        <h1 class="hero-title">¿Quiénes somos?</h1>
+
+    </div>
+  </div>
+
+
+
+    <!-- Sección "Quiénes Somos" -->
+    <section class="quienes-somos">
+
+        
+
+        <p class="descripcion">
+
+            En Fogoncito Chicken nos enorgullece ofrecer el mejor pollo a la brasa de la ciudad, 
+            preparado con ingredientes frescos y una receta secreta que ha pasado de generación en generación.
+            Nuestra misión es brindar una experiencia gastronómica única, 
+            con un sabor inconfundible y un ambiente acogedor para toda la familia.
+            <br><br>
+            Desde 2010, <strong>Fogoncito Chicken</strong> ha sido parte de la tradición gastronómica de Lima. 
+            Nuestro secreto: una receta familiar con especias seleccionadas y un toque único de leña 
+            que le da ese sabor inigualable a nuestro pollo.
+            <br><br>
+            Usamos pollo fresco 100% nacional, marinado por 24 horas en una mezcla de hierbas 
+            aromáticas y ajíes autóctonos. Cada pieza se asa lentamente en brasas de carbón, 
+            conservando su jugosidad y un crujiente dorado perfecto.
+            <br><br>
+            Disfruta de un ambiente rústico y acogedor, donde cada bocado te transporta a los 
+            sabores de antaño. Ideal para compartir en familia, celebraciones o un almuerzo casual entre amigos.
+        </p>
+
+        <div class="imagen-nosotros">
+            <img src="image-fogoncito-chicken/logoletras.png" alt="Pollo a la brasa Fogoncito" class="imagen">
+        </div>
+
+        <h3>Síguenos en nuestras redes sociales </h3>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/ElFogoncitoChicken/" class="botonsiño" target="_blank">
+                <img src="image-fogoncito-chicken/facebook.png" alt="Facebook">
+                <h1>Facebook</h1>
+            </a>
+            <a href="https://www.instagram.com/FogoncitoChicken" class="botonsiño" target="_blank">
+                <img src="image-fogoncito-chicken/logo-ig.png" alt="instagram">
+            <h1>Instagram</h1>
+            </a>
+            <a href="https://www.tiktok.com/@fogoncitochiken" class="botonsiño" target="_blank">
+                <img src="image-fogoncito-chicken/logo-tiktok.png" alt="tiktok">
+            <h1>TikTok</h1>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Logo y descripción -->
+      <div class="footer-logo">
+        <div class="logo-title">
+          <!-- Ícono -->
+          <img src="image-fogoncito-chicken/NewLogo.png" alt="Logo" width="32" height="32" class="logo-footer" />
+          <div>
+            <span class="footer-title">El Fogoncito</span>
+            <p class="footer-subtitle">Pollería</p>
+          </div>
+        </div>
+        <p class="footer-description">Disfruta del mejor pollo a la brasa con el auténtico sabor peruano. Tradición y calidad desde 1995.</p>
+        <div class="footer-social">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/menu">Carta</a></li>
+          <li><a href="/nosotros">Nuestra historia</a></li>
+          <li><a href="/ubicacion">Encuéntranos</a></li>
+        </ul>
+      </div>
+
+      <!-- Horarios -->
+      <div class="footer-section">
+        <h4>Horarios</h4>
+        <ul>
+          <li><span>Lunes - Jueves:</span> 10:00 - 22:00</li>
+          <li><span>Viernes - Sábado:</span> 10:00 - 23:00</li>
+          <li><span>Domingo:</span> 12:00 - 2:00</li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Av. 13 de Enero 1723, San Juan de Lurigancho</li>
+          <li>Teléfono:</li>
+          <li>935 258 422</li>
+          <li>Av. Gran Chimú, San Juan de Lurigancho</li>
+          <li>Teléfono:</li>
+          <li>987 654 321</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> © 2025 Chino Brasa - Tradición Peruana con Sabor Moderno</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

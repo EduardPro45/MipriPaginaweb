@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | Fogoncito Chiken</title>
+    <link rel="icon" href="image-fogoncito-chicken/logoletras.png">
+    <link rel="stylesheet" href="Styless07.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- link para iconos -->
+</head>
+
+<body>
+    <!-- formulario inicio de sesion -->
+    <form action="#" method="post">
+
+      
+        <img src="image-fogoncito-chicken/logoletras.png" alt="Logo del Fogoncito" class="logo">
+        <h2>INICIAR SESIÓN</h2>
+
+        <label for="email">Correo Electrónico: </label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contrasenia">Contraseña: </label>
+        <input type="password" id="contrasenia" name="contrasenia" required>
+
+        <button type="submit">Iniciar sesión</button>
+
+        <p><a href="recuperar_contrasenia.html">¿Olvidaste tu contraseña?</a></p>
+
+        <p>Aún no tienes una cuenta? <a href="Registrarse.html">Regístrate aquí</a></p>
+
+        <a href="pagina-principal.html" class="volver">← Volver</a>
+    </form>
+
+</body>
+
+
+<!-- Script para el boton 'Iniciar sesión' ,por el momento solo redirige a pagina-principal.html -->
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault(); // Previene el envío real, ya que aún no hay backend.
+        window.location.href = "pagina-principal.html"; // Redirige a la página principal
+    });
+</script>
+
+
+</html>
